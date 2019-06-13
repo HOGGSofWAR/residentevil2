@@ -1,13 +1,18 @@
 # Created by https://www.gitignore.io
 
 ### CodeKit ###
-# General CodeKit files to ignore
-config.codekit
+# General PrePros files to ignore
+prepros-6.config
 /min
 
+### Jade ###
+index.jade
 
 ### Sass ###
 .sass-cache
+.min.css
+.scss
+
 *.css.map
 
 
