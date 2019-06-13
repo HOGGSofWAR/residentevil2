@@ -1,0 +1,200 @@
+//compileExtended:style.css
+// Base Styles
+
+body
+  font-family: "Open Sans", sans-serif
+  background: black
+
+h1
+  color: #ccc
+  weight: 300
+
+figure
+  margin: auto
+
+.content
+  position: relative
+  z-index: 2
+  background: black
+  margin-bottom: 400px
+
+
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+    color: #ccc
+
+
+img
+  max-width: 100%
+
+
+
+// Parallax
+.resident-evil-box
+  position: relative
+  height: 600px
+  background:
+    image: url(../images/header-bg.png)
+    size: auto 600px
+    position: top center
+    attachment: fixed
+    repeat: no-repeat
+    color: black
+  overflow: hidden
+  z-index: 3  // stack order
+
+.leon-claire
+  height: 100%
+  width: 100%
+  background:
+      image: url(../images/resident-evil-2.png)
+      position: center
+      repeat: no-repeat
+  position: absolute
+  top: 20px
+
+.logo
+  height: 150px
+  width: 100%
+  background:
+      image: url(../images/resident-evil-2-logo.png)
+      position: center
+      repeat: no-repeat
+  position: absolute
+  top: 70%
+
+// Model Grid
+
+.resident-evil-pics
+
+  figure
+    margin-bottom: 20px
+    position: relative
+    opacity: 0
+    transform: translateX(20px)
+    transition: all 0.3s ease-in-out
+    overflow: hidden
+    cursor: pointer
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+    img
+      display: block
+      transform: scale(1)
+
+    &:hover
+      figcaption
+        left: 0%
+
+      img
+        transform: scale(1.2)
+        transition: all 0.5s ease-in-out
+
+  figcaption
+    position: absolute
+    bottom: 10px
+    left: -100%
+    background: black
+    color: white
+    padding: 2px 8px
+    font-size: 15px
+    transition: all 0.4s ease-in-out
+
+// large-window
+
+.large-window
+  height: 450px
+  width: 450px
+  background:
+    image: url(/images/resident-evil-2-gif.gif)
+    position: center 0px
+    repeat: repeat-y
+    attachment: fixed
+  margin-top: 100px
+  margin-left: 100px
+  margin-bottom: 50px
+  border-radius: 50%
+  position: relative
+
+  .window-tint
+    background-color: rgba(0,0,0,0.5)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .promo-text
+    color: white
+    font-weight: 100
+    font-size: 40px
+    line-height: 1.1
+
+    strong
+      display: block
+      font-size: 35px
+
+    span
+      font:
+        weight: 300
+        size: 30px
+        style: italic
+      color: rgba(255,255,255,0.6)
+
+    .window-cta
+      font-size: 20px
+      text-decoration: none
+      color: white
+      border: 1px solid white
+      padding: 10px 20px
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        background: white
+        color: black
+
+//posts
+
+.blog-posts
+  margin-top: 100px
+
+  .post
+    border: 1px solid #e1e1e1
+    padding: 20px 20px 0
+    background: black
+    position: relative
+
+  .post-1
+    transform: translate(100px, 20px)
+
+  .post-2
+    z-index: 2
+
+  .post-3
+    transform: translate(-100px, 20px)
+
+//footer
+
+footer
+  background: white
+  color: black
+  padding: 40px 0
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  .footer-block
+    max-width: 640px
+    margin: 0 auto
+
+  a
+    color: black
